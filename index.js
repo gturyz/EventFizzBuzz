@@ -9,12 +9,14 @@ emitter.on('FizzBuzz', function(arg) {
             console.log("FizzBuzz")
         } else if (arg % 5 == 0) {
             console.log("Buzz")
-        }
+        } else if (arg % 3 == 0) {
+            console.log("Fizz")
+        } else console.log(arg)
     }
 })
 
 emitter.emit('FizzBuzz', 'Coucou')
-emitter.emit('FizzBuzz', 54)
+emitter.emit('FizzBuzz', 53)
 emitter.emit('FizzBuzz', 25)
 emitter.emit('FizzBuzz', 15)
 emitter.emit('FizzBuzz', 9)
